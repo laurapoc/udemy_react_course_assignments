@@ -2,3 +2,6 @@
   text-align: center;
 }
 
+.inlineLIst {
+  display: inline-block;
+}
