@@ -1,3 +1,5 @@
+import * as actionTypes from "./actions";
+
 const initialState = {
   persons: [],
 };
@@ -11,13 +13,13 @@ const reducer = (state = initialState, action) => {
     num: state.persons.length + 1,
   };
   switch (action.type) {
-    case "ADD":
+    case actionTypes.ADD:
       return {
         ...state,
         persons: state.persons.concat(newPerson),
       };
 
-    case "DELETE":
+    case actionTypes.DELETE:
       const updatedPersonsList = state.persons.filter((person) => person.id !== action.personToDeleteId);
       return {
         ...state,
